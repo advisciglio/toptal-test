@@ -1,0 +1,95 @@
+@import "_lib/variables.scss";
+@import "_lib/mixins.scss";
+
+/* LEADERS */
+.leaders-intro{
+	margin-top:80px;
+	p.lead{font-size:15px; line-height:20px; color:$gray_7; margin-top:30px;}
+}
+
+.leaders-why-become{margin-top:60px;}
+	.reasons-list{margin-top:120px; overflow:hidden;}
+		.reasons-list-item{
+			width:27%; float:left; margin-right:9.5%;
+			&:last-child{margin:0;}
+		}
+		.reasons-list-image{
+			max-width:155px; max-height:145px; margin:auto;
+			img{width:100%; vertical-align:middle;}
+		}
+		.reasons-list-text{color:$gray_7; font-size:15px; line-height:20px; padding-top:22px; margin-top:45px; border-top:4px solid $gray_4;}
+
+.leaders-team{margin-top:60px;}
+	.leaders-list{overflow:hidden; line-height:1; margin:65px 0;}
+		.leaders-list-item{
+			font-weight:100; text-align:center; width:15.5%; margin-right:5.625%; float:left;
+			&:last-child{margin:0;}
+		}
+			.leaders-list-image{
+				overflow:hidden; @include rounded(); max-width:124px; max-height:124px; margin-bottom:15px; @include inline-block(); @include transition();
+				&:hover{@include opacity(.8);}
+				img{width:100%; vertical-align:middle;}
+			}
+			.leaders-list-name{font-size:15px; color:$blue_3; font-weight:400; margin-bottom:7px;}
+				.leaders-list-link{color:$blue_3; text-decoration:none;}
+			.leaders-list-location{font-size:12px;}
+
+.leaders-be-part{
+	background:url(../img/leaders/be-a-part.jpg) no-repeat center center $gray_6; background-size:cover; padding:150px 0;
+	p.lead{color:$white; text-align:center; font-size:39px; text-shadow:$solid rgba(0,0,0,.5); line-height:110%;}
+}
+#showcase-slider{position:relative; margin-top:40px;}
+.showcase-slide{margin:2px; overflow:hidden; @include rounded(); text-align:center;}
+
+.leaders-form{
+	margin-top:60px;
+	.input{width:100%; @include box-sizing();}
+	.form-field{
+		width:100%; margin:0 0 15px 0; @include box-sizing();
+		&.left, &.right{width:49%; float:left;}
+		&.left{margin-right:2%;}
+	}
+	.submit{min-width:220px;}
+}
+.signup-form{margin:60px 0 0 0;}
+
+.leaders-profile{
+	clear:both; margin-top:40px;
+	.section-header{color:$gray_8;}
+}
+.profiles-list{
+		font-size:13px; line-height:21px; margin:60px 0; @include column-count(4); @include column-gap(20px);
+	}
+	.profiles-list-link{
+		color:$gray_9; text-decoration:none;
+		&:hover{color:$gray_12;}
+	}
+@media only screen and (max-width: 768px) {
+	.profiles-list{@include column-count(3);}
+}
+@media only screen and (max-width: 480px) {
+	.leaders-intro{margin-top:10px;}
+	.reasons-list{margin:20px 0;}
+	.reasons-list-item{width:100%; @include box-sizing(); margin:0 0 30px 0; text-align:center;}
+	.reasons-list-text{margin-top:20px; border-width:2px;}
+	.leaders-team{margin:0;}
+	.leaders-list{margin:30px 0 0 0;}
+	.leaders-list-item, .leaders-list-item:last-child{width:30%; margin:0 5% 7% 0;}
+	.leaders-list-item:nth-child(3n){margin-right:0;}
+	.leaders-list-name{margin-bottom:4px; font-size:13px;}
+	.leaders-be-part{
+		padding:70px 0;
+		p.lead{font-size:32px;}
+	}
+	.leaders-form{
+		margin:20px 0;
+		.form-field.left, .form-field.right{width:100%; margin-right:0;}
+	}
+	.signup-form{margin:30px 0 0 0;}
+	.submit{width:100%;}
+	.leaders-profile{margin:20px 0 0 0;}
+	.profiles-list{@include column-count(2); margin:30px 0;}
+	.page-footer{font-size:13px; padding:20px;}
+}
+
+/* END LEADERS */

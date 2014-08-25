@@ -1,0 +1,109 @@
+@import 'variables.scss';
+
+@mixin animate($t:0.2s){
+  -webkit-transition: all $t ease-out;
+  -moz-transition: all $t ease-out;
+  -o-transition: all $t ease-out;
+  -ms-transition: all $t ease-out;
+  transition: all $t ease-out;
+}
+@mixin rounded($radius: 3px) {
+   border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin rounded-side($h, $v, $radius: 3px) {
+  border-#{$h}-#{$v}-radius: $radius;
+  -moz-border-radius-#{$h}#{$v}: $radius;
+  -webkit-border-radius#{$h}-#{$v}-radius: $radius;
+}
+@mixin transition($time: .2s, $ease: ease-out, $properties: all) {
+  transition: $properties $time ease-out;
+  -webkit-transition:$properties $time ease-out;
+  -moz-transition:$properties $time ease-out;
+}
+@mixin box-shadow($shadow: none) {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+@mixin inline-block(){
+  display:inline-block;
+  .display:inline;
+  .zoom:1;
+}
+@mixin opacity($amount){
+  opacity: $amount;
+  -moz-opacity: $amount;
+  -ms-filter:"alpha(opacity= $amount * 100)";
+  filter:alpha(opacity=$amount * 100)
+}
+@mixin gradient($begin, $end){
+  background: $end;
+  background: -moz-linear-gradient(top, $begin 0%, $end 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$begin), color-stop(100%,$end));
+  background: -webkit-linear-gradient(top, $begin 0%,$end 100%);
+  background: -o-linear-gradient(top, $begin 0%,$end 100%);
+  background: -ms-linear-gradient(top, $begin 0%,$end 100%);
+  background: linear-gradient(to bottom, $begin 0%,$end 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$begin', endColorstr='$end',GradientType=0 );
+}
+@mixin scale($amount:1){
+  -moz-transform: scale($amount);
+  -webkit-transform: scale($amount);
+  -o-transform: scale($amount);
+  -ms-transform: scale($amount);
+  transform: scale($amount);
+}
+@mixin icon($width, $height, $x, $y){
+	width:$width+px; height:$height+px; background-position:($x * -1)+px ($y * -1)+px;
+}
+@mixin remove-whitespace-ul(){
+	letter-spacing:-4px; word-spacing:-4px;
+}
+@mixin remove-whitespace-li(){
+	letter-spacing:0; word-spacing:0;
+}
+@mixin white-block($padding:20, $rounded:6px){
+  background:$white; padding:#{$padding}px;  @include rounded(#{$rounded}); border:2px solid $gray_2;
+}
+@mixin gray-block($padding:0, $rounded:0px){
+  background:$gray_1; padding:#{$padding}px;  @include rounded(#{$rounded}); @include box-shadow($gray_2 $solid)
+}
+@mixin double-border($width, $inside, $outside, $rounded){
+	border:$outside solid $width; @include rounded($rounded); box-shadow: 0px 0px 0px $width $inside inset; -moz-box-shadow: 0px 0px 0px $width $inside inset; -webkit-box-shadow: 0px 0px 0px $width $inside inset;
+	border/*\**/:1px solid $inside \9; box-shadow/*\**/:none\9;
+}
+@mixin double-border-2($iw, $ow, $ic, $oc){
+	border:$oc solid $ow;
+	@include box-shadow(0px 0px 0px $iw $ic inset);
+	border/*\**/:$iw solid $ic \9; box-shadow/*\**/:none\9;
+}
+@mixin box-sizing($bs: border-box){
+	box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+@mixin ie6789($prop, $val){
+	#{$prop}:#{$val+ "\0/"}; #{"*"+$prop}: $val;
+}
+@mixin ie67($prop, $val){
+	#{"*"+$prop}: $val;
+}
+@mixin ie678($prop, $val){
+	#{"*"+$prop}: $val; #{$prop+"/*\**/"}:$val+ \9;
+}
+@mixin ie89($prop, $val){
+	$prop: $val+" \0/";
+}
+@mixin column-count($count) {
+  -webkit-column-count: $count;
+  -moz-column-count: $count; 
+  column-count: $count;
+}
+@mixin column-gap($gap) {
+  -webkit-column-gap: $gap;
+  -moz-column-gap: $gap; 
+  column-gap: $gap;
+}

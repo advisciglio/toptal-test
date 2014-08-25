@@ -1,0 +1,17 @@
+@import "_lib/variables.scss";
+@import "_lib/mixins.scss";
+
+.flex-control-paging{
+	width:100%; text-align:center; margin-top:20px;
+	li{
+		@include inline-block(); margin:0 5px;
+		a{
+			text-indent:-9999px; width:12px; height:12px; @include rounded(6px); @include transition(); background:$gray_4; @include inline-block(); cursor:pointer;
+			&:hover{background:$gray_6;}
+			&.flex-active{background:$blue_2;}
+		}
+	}
+}
+.flex-direction-nav{
+	display:none;
+}

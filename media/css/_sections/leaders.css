@@ -1,0 +1,77 @@
+/* LEADERS */
+.leaders-intro { margin-top: 80px; }
+.leaders-intro p.lead { font-size: 15px; line-height: 20px; color: #a0a0a0; margin-top: 30px; }
+
+.leaders-why-become { margin-top: 60px; }
+
+.reasons-list { margin-top: 120px; overflow: hidden; }
+
+.reasons-list-item { width: 27%; float: left; margin-right: 9.5%; }
+.reasons-list-item:last-child { margin: 0; }
+
+.reasons-list-image { max-width: 155px; max-height: 145px; margin: auto; }
+.reasons-list-image img { width: 100%; vertical-align: middle; }
+
+.reasons-list-text { color: #a0a0a0; font-size: 15px; line-height: 20px; padding-top: 22px; margin-top: 45px; border-top: 4px solid #d4d4d4; }
+
+.leaders-team { margin-top: 60px; }
+
+.leaders-list { overflow: hidden; line-height: 1; margin: 65px 0; }
+
+.leaders-list-item { font-weight: 100; text-align: center; width: 15.5%; margin-right: 5.625%; float: left; }
+.leaders-list-item:last-child { margin: 0; }
+
+.leaders-list-image { overflow: hidden; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; max-width: 124px; max-height: 124px; margin-bottom: 15px; display: inline-block; .display: inline; .zoom: 1; transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; }
+.leaders-list-image:hover { opacity: 0.8; -moz-opacity: 0.8; -ms-filter: "alpha(opacity= $amount * 100)"; filter: alpha(opacity=80); }
+.leaders-list-image img { width: 100%; vertical-align: middle; }
+
+.leaders-list-name { font-size: 15px; color: #3662a2; font-weight: 400; margin-bottom: 7px; }
+
+.leaders-list-link { color: #3662a2; text-decoration: none; }
+
+.leaders-list-location { font-size: 12px; }
+
+.leaders-be-part { background: url(../img/leaders/be-a-part.jpg) no-repeat center center darkgray; background-size: cover; padding: 150px 0; }
+.leaders-be-part p.lead { color: white; text-align: center; font-size: 39px; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); line-height: 110%; }
+
+#showcase-slider { position: relative; margin-top: 40px; }
+
+.showcase-slide { margin: 2px; overflow: hidden; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; text-align: center; }
+
+.leaders-form { margin-top: 60px; }
+.leaders-form .input { width: 100%; box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+.leaders-form .form-field { width: 100%; margin: 0 0 15px 0; box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+.leaders-form .form-field.left, .leaders-form .form-field.right { width: 49%; float: left; }
+.leaders-form .form-field.left { margin-right: 2%; }
+.leaders-form .submit { min-width: 220px; }
+
+.signup-form { margin: 60px 0 0 0; }
+
+.leaders-profile { clear: both; margin-top: 40px; }
+.leaders-profile .section-header { color: #999999; }
+
+.profiles-list { font-size: 13px; line-height: 21px; margin: 60px 0; -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; -webkit-column-gap: 20px; -moz-column-gap: 20px; column-gap: 20px; }
+
+.profiles-list-link { color: #7c7c7c; text-decoration: none; }
+.profiles-list-link:hover { color: #363636; }
+
+@media only screen and (max-width: 768px) { .profiles-list { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } }
+@media only screen and (max-width: 480px) { .leaders-intro { margin-top: 10px; }
+  .reasons-list { margin: 20px 0; }
+  .reasons-list-item { width: 100%; box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin: 0 0 30px 0; text-align: center; }
+  .reasons-list-text { margin-top: 20px; border-width: 2px; }
+  .leaders-team { margin: 0; }
+  .leaders-list { margin: 30px 0 0 0; }
+  .leaders-list-item, .leaders-list-item:last-child { width: 30%; margin: 0 5% 7% 0; }
+  .leaders-list-item:nth-child(3n) { margin-right: 0; }
+  .leaders-list-name { margin-bottom: 4px; font-size: 13px; }
+  .leaders-be-part { padding: 70px 0; }
+  .leaders-be-part p.lead { font-size: 32px; }
+  .leaders-form { margin: 20px 0; }
+  .leaders-form .form-field.left, .leaders-form .form-field.right { width: 100%; margin-right: 0; }
+  .signup-form { margin: 30px 0 0 0; }
+  .submit { width: 100%; }
+  .leaders-profile { margin: 20px 0 0 0; }
+  .profiles-list { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; margin: 30px 0; }
+  .page-footer { font-size: 13px; padding: 20px; } }
+/* END LEADERS */

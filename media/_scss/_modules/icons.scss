@@ -1,0 +1,76 @@
+@import "../_lib/variables.scss";
+@import "../_lib/mixins.scss";
+
+/* ICONS */
+
+i, .icon{
+	background-image:url(../img/sm_general.png); background-repeat:no-repeat; @include inline-block; font-size:0; vertical-align:middle; text-indent:-9999px; @include ie67(text-indent,0);
+	&.logo-footer{
+		@include icon(155,30,0,0);
+		&:hover{@include icon(155,30,0,30);}
+	}
+	&.circular{
+		@include transition();
+		&.facebook{
+			@include icon(24,24,0,190);
+			&:hover{@include icon(24,24,0,214);}
+		}
+		&.youtube{
+			@include icon(24,24,24,190);
+			&:hover{@include icon(24,24,24,214);}
+		}
+		&.email{
+			@include icon(24,24,48,190);
+			&:hover{@include icon(24,24,48,214);}
+		}
+	}
+	&.facebook{@include icon(46,45,155,0);}
+	&.calendario{@include icon(196,192,0,281);}
+	&.checklist{@include icon(180,178,0,473);}
+	&.apn{
+		@include icon(40,40,0,60);
+		&:hover{@include icon(40,40,0,100);}
+	}
+	&.aagm{
+		@include icon(40,40,40,60);
+		&:hover{@include icon(40,40,40,100);}
+	}
+	&.ecomed{
+		@include icon(40,40,80,60);
+		&:hover{@include icon(40,40,80,100);}
+	}
+	&.nav{
+		@include transition(); cursor:pointer;
+		&.izq{
+			@include icon(30,30,30,160);
+			&:hover{@include icon(30,30,0,160);}
+		}
+		&.der{
+			@include icon(30,30,60,160);
+			&:hover{@include icon(30,30,90,160);}
+		}
+	}
+	&.flecha{
+		&.naranja{@include icon(6,7,79,140);}
+		&.cyan{@include icon(6,7,85,140);}
+	}
+	&.tip{
+		&.porque{@include icon(17,9,0,140);}
+		&.hover{@include icon(16,9,17,140);}
+		&.tooltip{@include icon(5,5,0,149);}
+		&.testimonio{@include icon(10,12,33,140);}
+	}
+	&.enalquiler{@include icon(43,43,0,238);}
+	&.alerta{@include icon(45,40,43,238);}
+	&.quotizq{@include icon(32,25,201,0);}
+	&.quotder{@include icon(32,25,201,25);}
+	&.duracion{@include icon(64,64,196,281);}
+	&.dificultad{@include icon(71,64,196,345);}
+	&.salida{@include icon(32,53,196,409);}
+	&.llegada{@include icon(41,53,228,409);}
+	&.volcan{background-image:url(../img/volcan.png); @include icon(463,215,0,0);}
+	&.email{@include icon(21,15,111,140);}
+	&.telefono{@include icon(20,20,91,140);}
+}
+
+/* END ICONS */

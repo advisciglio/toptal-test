@@ -1,0 +1,89 @@
+@import "../_lib/variables.scss";
+@import "../_lib/mixins.scss";
+
+/* LAYOUT */
+body{
+	background:$white;
+}
+
+/* HEADER */
+
+/* GENERAL GRID */
+.wrapper{
+	width:100%; max-width:1100px; margin:auto; position:relative; box-sizing:border-box;
+	&.narrow-wrap{max-width:840px;}
+	&.has-padding{padding:20px;}
+	&.has-small-padding{padding:12px;}
+}
+.page-header{padding-top:4px; background:url(../img/header/bg.gif) repeat-x top center;}
+.nav-expand{
+	display:none; width:30px; height:30px; @include rounded(4px); border:1px solid $gray_5; background:$white; position:absolute; top:20px; right:20px; text-indent:-9999px; z-index:100; cursor:pointer; background-image:url(../img/icons/menu.png); background-repeat:no-repeat; background-size:20px 10px; background-position:5px 10px;
+	&:hover{background-color:$gray_1;}
+}
+.header-top{overflow:hidden; position:relative; font-weight:600;}
+	.main-logo{
+		background:url(../img/toptal-logo.png) no-repeat top left; @include transition(); @include opacity(.9); width:105px; height:34px; background-size:105px 34px; text-indent:-9999px; @include inline-block(); float:left;
+		&:hover{@include opacity(1);}
+	}
+	.login-nav{
+		float:right;
+		.textlink{text-transform:uppercase; font-size:14px; text-decoration:none; margin-left:5px;}
+		.button{font-weight:800; width:70px;}
+	}
+	.login-nav-item{
+		@include inline-block(); margin-left:5px;
+		&.right-margin{margin-right:5px;}
+	}
+	.main-nav-wrapper{border-top:1px solid $gray_3; font-size:13px;}
+	.main-nav-item{
+		@include inline-block(); padding:0 9px; border-left:1px solid $gray_5; line-height:1; height:12px; position:relative;
+		&:first-child, &.signin{border-left:0;}
+	}
+	.main-nav-link{
+		text-decoration:none; color:$gray_6; @include transition(); text-transform:uppercase;
+		&:hover{color:$gray_10;}
+	}
+	.contact-info{font-size:14px; font-weight:600; text-transform:uppercase; color:$gray_10; position:absolute; top:12px; right:20px;}
+
+/* FOOTER */
+.page-footer{
+	background:$blue_3; padding:80px 0; color:$white; font-size:15px; text-shadow:$solid rgba(0,0,0,.5);
+}
+.footer-copyright{float:left;}
+.footer-assistance{
+	float:right;
+	.call-us{font-weight:800;}
+}
+.footer-link{
+	color:$white; text-decoration:none;
+	&:hover{@include opacity(.8);}
+}
+
+@media only screen and (max-width: 768px) {
+	/*body{background:yellow;}*/
+	.page-footer{text-align:center; line-height:150%; padding:50px 0;}
+	.footer-copyright{float:none;}
+	.footer-assistance{float:none;}
+}
+
+@media only screen and (max-width: 480px) {
+	/*body{background:gray;}*/
+	.nav-expand{display:block;}
+	.login-nav, .main-nav-wrapper{display:none;}
+	.login-nav{
+		float:none; clear:both; margin-top:10px; width:100%;
+		.button{width:100%; box-sizing:border-box;}
+	}
+	.main-logo{margin:20px;}
+	.header-top.wrapper.has-padding{padding:0; border-bottom:1px solid $gray_2;}
+	.login-nav-item{
+		display:block; text-align:center; background:$gray_2; padding:6px; border-top:1px solid $gray_3; margin:0;
+		&.right-margin{margin:0;}
+	}
+	.main-nav-wrapper .wrapper{padding:0;}
+	.main-nav-item{display:block; border-left:none; border-bottom:1px solid $gray_2; text-align:center; height:auto; background:$gray_1;}
+	.main-nav-link{display:block; padding:10px 0;}
+	.contact-info{position:relative; left:0; top:0; text-align:center; padding:8px; border-bottom:1px solid $gray_2; color:$gray_6; background:$gray_1;}
+}
+.slide{width:210px; height:135px; text-align:center; float:left;}
+/* END LAYOUT */

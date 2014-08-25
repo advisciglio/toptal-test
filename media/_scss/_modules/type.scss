@@ -1,0 +1,16 @@
+/* TYPE */
+/*
+	FONT-WEIGHT:
+	$proxima-nova: 	100, 400, 600, 800
+*/
+body, html {
+  font: normal 400 15px/1.45em "proxima-nova", Arial, Helvetica, sans-serif !important;
+  text-rendering: optimizeLegibility;
+  color: $gray_12;
+}
+.main-header{font-size:45px; font-weight:400; color:$blue_2; line-height:1;}
+.section-header{font-size:18px; font-weight:100; color:$gray_11; text-decoration:underline;}
+.centered{text-align:center;}
+@media only screen and (max-width: 480px) {
+	.main-header{font-size:34px;}
+}

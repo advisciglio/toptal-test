@@ -1,0 +1,26 @@
+@import "../_lib/variables.scss";
+@import "../_lib/mixins.scss";
+
+/* FORM */
+.input{
+	font-family:$proximanova; font-size:14px; background:$gray_1; color:$gray_12; padding:20px 15px; @include rounded(); border:1px solid $gray_2; @include transition(); z-index:100; position:relative;
+	&:focus{background:$white; border:1px solid $lightblue_2; @include box-shadow(0 0 8px $lightblue_1);}
+	&.has-icon{
+		padding-left:45px; background-position:15px 18px; background-repeat:no-repeat; background-size:18px 18px;
+		&.name{background-image:url(../img/form/name.png);}
+		&.email{background-image:url(../img/form/email.png);}
+		&.city{background-image:url(../img/form/city.png);}
+		&.twitter{background-image:url(../img/form/twitter.png);}
+		&.comment{background-image:url(../img/form/comment.png);}
+	}
+}
+.form-actions{
+	text-align:right;	
+}
+.form-field{position:relative;}
+.error-message{background:$error_red_1; color:$white; font-size:11px; position:absolute; top:-25px; right:10px; padding:3px 12px; @include rounded-side(top, left, 3px); @include rounded-side(top, right, 3px);}
+.form-field.error{
+	.input{border:1px solid $error_red_2;}
+	.error-message{@include inline-block();}
+}
+.submit{font-family:$proximanova;}

@@ -1,0 +1,26 @@
+@import "../_lib/variables.scss";
+@import "../_lib/mixins.scss";
+
+/* UI */
+
+/* button */
+.button, button, input.submit{
+	@include rounded(5px); text-decoration:none; color:$gray_5; border:1px solid $green_4; @include inline-block; text-align:center; padding:1em; cursor:pointer; @include transition();
+	&.green{
+		@include gradient($green_2, $green_3); color:$white; border-color:$green_5; color:$white; @include box-shadow(inset $solid $green_1); text-shadow:$solid $green_text_shadow;
+		&:hover{@include gradient($green_3, $green_4);}
+		&:active{@include gradient($green_5, $green_4); @include box-shadow(none);}
+	}
+	&.uppercase{text-transform:uppercase;}
+	&.small{padding:6px 12px; font-size:12px;}
+	&.big{font-size:16px; padding:20px 30px;}
+}
+.textlink{
+	&.lightgray{color:$gray_6;
+		&:hover{color:$gray_8;}
+	}
+	&.darkgray{color:$gray_10;
+		&:hover{color:$gray_12;}
+	}
+}
+/* END UI */

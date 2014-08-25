@@ -1,0 +1,7 @@
+.flex-control-paging { width: 100%; text-align: center; margin-top: 20px; }
+.flex-control-paging li { display: inline-block; .display: inline; .zoom: 1; margin: 0 5px; }
+.flex-control-paging li a { text-indent: -9999px; width: 12px; height: 12px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; background: #d4d4d4; display: inline-block; .display: inline; .zoom: 1; cursor: pointer; }
+.flex-control-paging li a:hover { background: darkgray; }
+.flex-control-paging li a.flex-active { background: #3b67a7; }
+
+.flex-direction-nav { display: none; }
