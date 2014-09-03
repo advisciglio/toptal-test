@@ -18,7 +18,7 @@
 	text-align:right;	
 }
 .form-field{position:relative;}
-.error-message{background:$error_red_1; color:$white; font-size:11px; position:absolute; top:-25px; right:10px; padding:3px 12px; @include rounded-side(top, left, 3px); @include rounded-side(top, right, 3px); z-index:100;}
+.error-message{background:$error_red_1; color:$white; font-size:11px; position:absolute; top:-25px; right:10px; padding:3px 12px; @include rounded-side(top, left, 3px); @include rounded-side(top, right, 3px); z-index:10;}
 .form-field.error{
 	.input{border:1px solid $error_red_2;}
 	.error-message{@include inline-block();}
